@@ -5,7 +5,7 @@ const PatientCard = ({ patient, setPatient, handleDeletePatient }) => {
   const { id, petName, ownerName, ownerEmail, altaData, petSymptoms } = patient;
 
   return (
-    <div className="bg-white shadow-md rounded-lg px-5 py-5 flex flex-col gap-3">
+    <div className="bg-white shadow-md rounded-lg px-5 py-5 flex flex-col gap-3 mb-2">
       <p className="block text-gray-700 uppercase font-bold">
         Nombre: {""} <span className="font-normal normal-case">{petName}</span>
       </p>

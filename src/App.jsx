@@ -13,9 +13,9 @@ function App() {
   } = usePatients();
 
   return (
-    <div className="container mx-auto pt-20">
+    <div className="container mx-auto">
       <Header />
-      <div className="pt-20 container w-auto flex flex-col sm:flex-row align-middle justify-center gap-3">
+      <div className="pt-10 container w-auto flex flex-col sm:flex-row align-middle justify-center gap-3">
         <AddPatientsForm
           patients={patients}
           setPatients={handleAddPatients}
