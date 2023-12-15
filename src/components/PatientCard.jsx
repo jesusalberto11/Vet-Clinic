@@ -2,7 +2,7 @@ import React from "react";
 //import './PatientCard.css';
 
 const PatientCard = ({ patient, setPatient, handleDeletePatient }) => {
-  const { id, petName, ownerName, ownerEmail, altaData, petSymptoms } = patient;
+  const { id, petName, ownerName, ownerEmail, altaDate, petSymptoms } = patient;
 
   return (
     <div className="bg-white shadow-md rounded-lg px-5 py-5 flex flex-col gap-3 mb-2">
@@ -19,7 +19,7 @@ const PatientCard = ({ patient, setPatient, handleDeletePatient }) => {
       </p>
       <p className="block text-gray-700 uppercase font-bold">
         Fecha de alta: {""}{" "}
-        <span className="font-normal normal-case">{altaData}</span>
+        <span className="font-normal normal-case">{altaDate}</span>
       </p>
       <p className="block text-gray-700 uppercase font-bold">
         Sintomas: {""}{" "}
