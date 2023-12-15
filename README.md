@@ -19,7 +19,7 @@ This repository contains a React App, it was created using:
 ### :camera: Screenshots
 
 <div align="center"> 
-  <img src="https://github.com/jesusalberto11/PruebaTecnicaTreea/blob/main/assets/img/github-readme/section-1.png" alt="App_Image_1" title="First section" />
+  <img src="https://github.com/jesusalberto11/Vet-Clinic/blob/main/public/project-img.png" alt="App_Image_1" title="First section" />
 </div>
 
 <!-- Getting Started -->
