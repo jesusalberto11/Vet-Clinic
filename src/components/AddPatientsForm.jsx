@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ErrorMessage from "./ErrorMessage";
+import FormInput from "./form/FormInput";
 
 const AddPatientsForm = ({ patients, setPatients, patient, setPatient }) => {
   const [petName, setPetName] = useState("");
@@ -73,94 +74,46 @@ const AddPatientsForm = ({ patients, setPatients, patient, setPatient }) => {
         {error && (
           <ErrorMessage message={"Todos los campos son obligatorios"} />
         )}
-        <div className="flex flex-col gap-2">
-          <label
-            className="block text-gray-700 uppercase font-bold"
-            htmlFor="petName"
-          >
-            Nombre del paciente
-          </label>
-          <input
-            id="petName"
-            name="petname"
-            type="text"
-            placeholder="Nombre de la mascota"
-            className="w-full border-2 focus:outline-indigo-700 px-2 py-2 rounded-md"
-            value={petName}
-            onChange={(e) => setPetName(e.target.value)}
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label
-            className="block text-gray-700 uppercase font-bold"
-            htmlFor="ownerName"
-          >
-            Nombre del propietario
-          </label>
-          <input
-            required
-            id="ownerName"
-            name="ownername"
-            type="text"
-            placeholder="Nombre del propietario"
-            className="w-full border-2 focus:outline-indigo-700 px-2 py-2 rounded-md"
-            value={ownerName}
-            onChange={(e) => setOwnerName(e.target.value)}
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label
-            className="block text-gray-700 uppercase font-bold"
-            htmlFor="ownerEmail"
-          >
-            Email del propietario
-          </label>
-          <input
-            required
-            id="ownerEmail"
-            name="owneremail"
-            type="email"
-            placeholder="Email del propietario"
-            className="w-full border-2 focus:outline-indigo-700 px-2 py-2 rounded-md"
-            value={ownerEmail}
-            onChange={(e) => setOwnerEmail(e.target.value)}
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label
-            className="block text-gray-700 uppercase font-bold"
-            htmlFor="altaDate"
-          >
-            Fecha de alta
-          </label>
-          <input
-            required
-            id="altaDate"
-            name="altadate"
-            type="date"
-            className="w-full border-2 focus:outline-indigo-700 px-2 py-2 rounded-md"
-            value={altaDate}
-            onChange={(e) => setAltaDate(e.target.value)}
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label
-            className="block text-gray-700 uppercase font-bold"
-            htmlFor="symptoms"
-          >
-            Sintomas
-          </label>
-          <textarea
-            required
-            id="symptoms"
-            name="petsymptoms"
-            type="email"
-            placeholder="Describe los sintomas"
-            className="w-full border-2 focus:outline-indigo-700 px-2 py-2 rounded-md resize-none"
-            value={petSymptoms}
-            onChange={(e) => setPetSymptoms(e.target.value)}
-          />
-        </div>
+        <FormInput
+          id="petname"
+          label={"Nombre del paciente"}
+          type={"text"}
+          placeholder={"Nombre de la mascota"}
+          value={petName}
+          setValue={setPetName}
+        />
+        <FormInput
+          id="ownerName"
+          label={"Nombre del propietario"}
+          type={"text"}
+          placeholder={"Nombre del propietario"}
+          value={ownerName}
+          setValue={setOwnerName}
+        />
+        <FormInput
+          id="ownerEmail"
+          label={"Email del propietario"}
+          type={"email"}
+          placeholder={"Email del propietario"}
+          value={ownerEmail}
+          setValue={setOwnerEmail}
+        />
+        <FormInput
+          id="altaDate"
+          label={"Fecha de alta"}
+          type={"date"}
+          placeholder={""}
+          value={altaDate}
+          setValue={setAltaDate}
+        />
+        <FormInput
+          id="symptoms"
+          label={"Sintomas"}
+          type={"textArea"}
+          placeholder={"Describe los sintomas"}
+          value={petSymptoms}
+          setValue={setPetSymptoms}
+        />
         <button
           type="submit"
           className="transition-all bg-indigo-600 text-white p-3 rounded-md uppercase font-bold hover:bg-indigo-700 hover:cursor-pointer active:bg-green-500"
